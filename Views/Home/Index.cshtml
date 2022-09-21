@@ -1,0 +1,48 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="intro">
+    <h1>Welcome to the Pokemon Storage System</h1>
+
+
+    <div class="buttonHolder">
+        <input type="checkbox" id="toggleLogin">
+        <label for="toggleLogin">Login</label>
+        <dialog class="loginD">
+
+            <form method="post" action="Home/ProcessLogin" class="modalform">
+                <h3>6 digit trainer id:</h3>
+                <input type="string" name="trainerId" placeholder="Trainer ID"/>  
+                <h3>First Name:</h3>
+                <input type="string" name="fName" placeholder="First Name"/>  
+                <h3>Password:</h3>
+                <input type="password" name="password" placeholder="password"/>   
+                <div class="buttonHolder">
+                    <label for="toggleLogin">Return</label>
+                    <label><input type="submit" style="display:none"/>Submit</label> 
+                </div>
+            </form>
+        </dialog>
+
+
+            <input type="checkbox" id="toggleSignup">
+        <label for="toggleSignup">Sign Up</label>
+        <dialog class="signupD">
+
+            <form method="post" action="Home/FirstSignUp"class="modalform">
+                <h2>Sign Up Form:</h2>
+                 <h3>First Name:</h3>
+                <input type="string" name="fName" placeholder="First Name"/>  
+                <h3>Last Name:</h3>
+                <input type="string" name="lName" placeholder="Last Name"/>  
+                <h3>Password:</h3>
+                <input type="password" name="password" placeholder="password"/> 
+                <div class="buttonHolder">
+                    <label for="toggleSignup">Return</label>  
+                    <label><input type="submit" style="display:none"/>Submit</label> 
+                </div>
+            </form>
+        </dialog>
+    </div>
+</div>

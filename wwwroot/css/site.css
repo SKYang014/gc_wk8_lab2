@@ -1,0 +1,133 @@
+html {
+  font-size: 14px;
+  
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+header{
+    background-color:black;
+}
+body {
+  margin-bottom: 60px;
+
+}
+
+body {
+    margin: 0;
+    background-color: black;
+    font-family: 'VT323', sans-serif;
+}
+
+.intro {
+    background: url('../images/2.jpg'),linear-gradient(233deg, #a34e21, #5c1010, #1c5215, #185e70);
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    /*    background-blend-mode: hard-light;*/
+    animation: hue-rotate 3s linear infinite;
+    overflow: auto;
+    color: white;
+    font-family: 'VT323', sans-serif;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-content: center;
+    padding-top: 60px
+}
+
+.intro > h1 {
+    font-size: 500%;
+
+}
+
+@keyframes hue-rotate {
+    from {
+        -webkit-filter: hue-rotate(0);
+        -moz-filter: hue-rotate(0);
+/*        -ms-filter: hue-rotate(0);*/
+        filter: hue-rotate(0);
+    }
+
+    to {
+        -webkit-filter: hue-rotate(360deg);
+        -moz-filter: hue-rotate(360deg);
+/*        -ms-filter: hue-rotate(360deg);*/
+        filter: hue-rotate(360deg);
+    }
+}
+
+#toggleLogin {
+    visibility: hidden;
+    opacity: 0;
+    position: relative;
+    z-index: -1;
+
+}
+#toggleSignup {
+    visibility: hidden;
+    opacity: 0;
+    position: relative;
+    z-index: -1;
+}
+
+#toggleLogin:checked ~ .loginD {
+   display: block;
+}
+
+#toggleSignup:checked ~ .signupD {
+    display: block;
+}
+
+label {
+    background: skyblue;
+    color: white;
+    padding: .5em 1em;
+    border-radius: 10px;
+    flex-grow: 0;
+    font-size:50px;
+    margin:10px;
+
+}
+
+@keyframes appear {
+    0% {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+}
+
+.loginD {
+    animation: appear 350ms ease-in 1;
+    max-width: 1000px;
+}
+.signupD {
+    animation: appear 350ms ease-in 1;
+    max-width: 1000px;
+}
+
+.buttonHolder {
+    display:flex;
+    justify-content:center;
+    margin-top:50px;
+    
+}
+
+.modalform {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+/*    background: url('../images/3.jpg');*/
+/*    width: 50%;*/
+    background-position: center;
+}
+
